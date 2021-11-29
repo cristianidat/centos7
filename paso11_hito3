@@ -1,0 +1,21 @@
+#!/bin/bash
+#Cambiar el nombre del dominio por el correspondiente.
+chcon -t named_conf_t /var/lib/samba/bind-dns/dns.keytab
+
+chcon -t named_conf_t /var/lib/samba/bind-dns/named.conf
+
+chcon -t named_conf_t /var/lib/samba/bind-dns/dns/sam.ldb
+
+chcon -t named_conf_t /var/lib/samba/bind-dns/dns/sam.ldb.d/* -R
+
+chcon -t named_var_run_t /var/lib/samba/bind-dns/dns
+
+chcon -t named_var_run_t /var/lib/samba/bind-dns/dns/* -R
+
+chcon -t named_var_run_t /var/lib/samba/sysvol/lawyer.com
+
+chcon -t named_var_run_t /var/named/data/named.run
+
+chcon -t named_var_run_t /var/named/dynamic/managed-keys.bind.jnl
+
+chcon -t named_var_run_t /var/named/dynamic/managed-keys.bind

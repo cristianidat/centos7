@@ -1,0 +1,18 @@
+#!/bin/bash
+#Cambiar el nombre del dominio por el correspondiente
+semanage fcontext -a -t named_conf_t /var/lib/samba/bind-dns/dns.keytab
+
+semanage fcontext -a -t named_conf_t /var/lib/samba/bind-dns/named.conf
+
+semanage fcontext -a -t named_conf_t /var/lib/samba/bind-dns/dns/sam.ldb
+
+semanage fcontext -a -t named_conf_t /var/lib/samba/bind-dns/dns
+
+semanage fcontext -a -t named_conf_t /var/lib/samba/sysvol/lawyer.com
+
+semanage fcontext -a -t named_conf_t  /var/named/data/named.run
+
+semanage fcontext -a -t named_conf_t /var/named/dynamic/managed-keys.bind.jnl
+
+semanage fcontext -a -t named_conf_t /var/named/dynamic/managed-keys.bind
+

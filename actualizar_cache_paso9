@@ -1,0 +1,7 @@
+#!/bin/bash
+wget -N http://www.internic.net/domain/named.root -O /var/named/named.ca
+chown root:named /var/named/named.ca
+
+
+chmod 640 /var/named/named.ca
+

@@ -1,0 +1,13 @@
+#!/bin/bash
+chgrp named /var/lib/samba/bind-dns/named.conf
+
+
+chmod g+r /var/lib/samba/bind-dns/named.conf
+
+
+restorecon -R /var/lib/samba/bind-dns/named.conf
+
+chcon -t named_conf_t /var/lib/samba/bind-dns/named.conf
+
+
+semanage fcontext -a -t named_conf_t /var/lib/samba/bind-dns/named.conf

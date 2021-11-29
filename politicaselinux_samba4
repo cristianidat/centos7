@@ -1,0 +1,9 @@
+#!/bin/bash
+getsebool -a | grep samba
+setsebool -P samba_domain_controller 1
+
+
+setsebool -P samba_enable_home_dirs on
+
+
+setsebool -P samba_share_nfs on

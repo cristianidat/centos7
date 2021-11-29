@@ -1,0 +1,35 @@
+#!/bin/bash
+
+#Cambiar el nombre del dominio por el que estemos usando.
+#En este caso se tendria q reemplazar lawyer.com
+chgrp named /var/lib/samba/bind-dns/dns.keytab
+
+chmod g+r /var/lib/samba/bind-dns/dns.keytab
+
+chgrp named /var/lib/samba/bind-dns/named.conf
+
+chmod g+r /var/lib/samba/bind-dns/named.conf
+
+chgrp named /var/lib/samba/bind-dns/dns/sam.ldb
+
+chmod g+r /var/lib/samba/bind-dns/dns/sam.ldb
+
+chgrp named /var/lib/samba/bind-dns/dns
+
+chmod g+r /var/lib/samba/bind-dns/dns
+
+chgrp named /var/lib/samba/sysvol/lawyer.com
+
+chmod g+r /var/lib/samba/sysvol/lawyer.com
+
+chgrp named /var/named/data/named.run
+
+chmod g+r /var/named/data/named.run
+
+chgrp named /var/named/dynamic/managed-keys.bind.jnl
+
+chmod g+r /var/named/dynamic/managed-keys.bind.jnl
+
+chgrp named /var/named/dynamic/managed-keys.bind
+
+chmod g+r /var/named/dynamic/managed-keys.bind

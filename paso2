@@ -1,0 +1,20 @@
+#!/bin/bash
+yum -y groupinstall 'Development Tools'
+
+wget http://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+
+rpm -ivh epel-release-latest-7.noarch.rpm
+
+yum install -y attr bind-utils docbook-style-xsl gcc gdb krb5-workstation \
+libsemanage-python libxslt perl perl-ExtUtils-MakeMaker \
+perl-Parse-Yapp perl-Test-Base pkgconfig policycoreutils-python \
+python-crypto gnutls-devel libattr-devel keyutils-libs-devel \
+libacl-devel libaio-devel libblkid-devel libxml2-devel openldap-devel \
+pam-devel pop-devel python-devel readline-devel zlib-devel systemd-devel \
+iniparser libldb libtalloc libtdb libtevent \
+python-devel gnutls-devel libacl-devel openldap-devel pam-devel \
+readline-devel krb5-devel cups-devel jansson-devel gpgme-devel libarchive-devel lmdb
+
+yum install -y bind
+
+yum -y update

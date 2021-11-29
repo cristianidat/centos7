@@ -1,0 +1,4 @@
+#!/bin/bash
+rndc-confgen -a -r /dev/urandom -b 512 -c /etc/rndc.key
+chown root:named /etc/rndc.key
+chmod 640 /etc/rndc.key

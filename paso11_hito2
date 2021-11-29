@@ -1,0 +1,17 @@
+#!/bin/bash
+#Cambiar el "lawyer.com" por el dominio q estemos usando
+restorecon -R /var/lib/samba/bind-dns/dns
+
+restorecon -R /var/lib/samba/bind-dns/dns.keytab
+
+restorecon -R /var/lib/samba/bind-dns/dns/sam.ldb
+
+restorecon -R /var/lib/samba/bind-dns/named.conf
+
+restorecon -R /var/lib/samba/sysvol/lawyer.com
+
+restorecon -R /var/named/data/named.run
+
+restorecon -R /var/named/dynamic/managed-keys.bind.jnl
+
+restorecon -R /var/named/dynamic/managed-keys.bind

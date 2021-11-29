@@ -1,0 +1,34 @@
+#!/bin/bash
+firewall-cmd --add-service={dns,kerberos,kpasswd,ldap,ldaps,samba} --permanent 
+firewall-cmd --permanent --add-port=111/tcp
+firewall-cmd --permanent --add-port=111/udp
+firewall-cmd --permanent --add-port=53/tcp
+firewall-cmd --permanent --add-port=53/udp
+firewall-cmd --permanent --add-port=88/tcp
+firewall-cmd --permanent --add-port=88/udp
+firewall-cmd --permanent --add-port=135/tcp
+firewall-cmd --permanent --add-port=137/tcp
+firewall-cmd --permanent --add-port=137/udp
+firewall-cmd --permanent --add-port=138/udp
+firewall-cmd --permanent --add-port=139/tcp
+firewall-cmd --permanent --add-port=389/tcp
+firewall-cmd --permanent --add-port=389/udp
+firewall-cmd --permanent --add-port=445/tcp
+firewall-cmd --permanent --add-port=464/tcp
+firewall-cmd --permanent --add-port=464/udp
+firewall-cmd --permanent --add-port=636/tcp
+firewall-cmd --permanent --add-port=1024/tcp
+firewall-cmd --permanent --add-port=1024/udp
+firewall-cmd --permanent --add-port=5000/tcp
+firewall-cmd --permanent --add-port=5000/udp
+firewall-cmd --permanent --add-port=3500/tcp
+firewall-cmd --permanent --add-port=3268/tcp
+firewall-cmd --permanent --add-port=3269/tcp
+firewall-cmd --permanent --add-port=5353/tcp
+firewall-cmd --permanent --add-port=5353/udp
+firewall-cmd --permanent --add-port=32774/tcp
+firewall-cmd --permanent --add-port=834/tcp 
+firewall-cmd --permanent --add-port=49152/tcp
+firewall-cmd --permanent --add-port=65535/tcp
+
+firewall-cmd --reload

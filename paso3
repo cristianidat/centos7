@@ -1,0 +1,23 @@
+#Establecer ip fija al servidor
+
+TYPE="Ethernet"
+PROXY_METHOD="none"
+BROWSER_ONLY="no"
+BOOTPROTO="none"
+DEFROUTE="yes"
+IPV4_FAILURE_FATAL="no"
+IPV6INIT="yes"
+IPV6_AUTOCONF="yes"
+IPV6_DEFROUTE="yes"
+IPV6_FAILURE_FATAL="no"
+IPV6_ADDR_GEN_MODE="stable-privacy"
+NAME="enp0s3"
+UUID="c6effd5b-1cd7-456d-9fc9-c278e1639024"
+IPADDR="192.168.1.20"
+GATEWAY="192.168.1.1"
+PREFIX="24"
+DNS1="192.168.1.20"
+DNS2="8.8.8.8"
+DOMAIN="idat.com"......←
+DEVICE="enp0s3"        
+ONBOOT="yes"
